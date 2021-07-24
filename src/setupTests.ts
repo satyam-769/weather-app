@@ -3,3 +3,12 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+// React 16 Enzyme adapter
+Enzyme.configure({ adapter: new Adapter() });
+// Make Enzyme functions available in all test files without importing
+// , { shallow, render, mount }
+// global.shallow = shallow;
+// global.render = render;
+// global.mount = mount;
